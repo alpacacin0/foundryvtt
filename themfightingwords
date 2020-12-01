@@ -1,3 +1,5 @@
+// List taken from https://perchance.org/hv4px0830j
+
 function showToGM(actionName, message){
   let gmd = new Dialog({
     title: actionName,
