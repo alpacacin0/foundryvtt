@@ -1,0 +1,488 @@
+function showToGM(actionName, message){
+  let gmd = new Dialog({
+    title: actionName,
+    content: `<div style="padding: 10px">${message}</div>`,
+    buttons: {
+      one: {
+        label: `⏪ Back`,
+        callback: () => {d.render(true)}
+        },
+      two: {
+        label: `❌ Done`,
+        callback: () => {console.log(`Done`)}
+        }
+     },
+    render: html => console.log("Register interactivity in the rendered dialog"),
+    close: html => console.log("This always is logged no matter which option is chosen")
+  });
+  gmd.content = `changed`
+  gmd.render(true);
+};
+
+let d = new Dialog({ //dialog object creates the window with all the buttons
+title: "Them Fighting words",
+buttons: {
+one: {
+ label: "👊<br>Melee",
+ callback: () => {showToGM(`👊 Melee`,
+	`Smack<br>
+	Beat<br>
+	Punch<br>
+	Pummel<br>
+	Batter<br>
+	Crush<br>
+	Strike<br>
+	Punch<br>
+	Jab<br>
+	Kick<br>
+	Belt<br>
+	Slam<br>
+	Boot<br>
+	Punt<br>
+	Dropkick`)}
+  },
+two: {
+ label: "🏹<br>Pierce",
+ callback: () => {showToGM(`🏹 Pierce`,
+	`Bore through<br>
+	Cut<br>
+	Drill through<br>
+	Find a Gap<br>
+	Gash<br>
+	Gore<br>
+	Impale<br>
+	Jab<br>
+	Lance<br>
+	Penetrate<br>
+	Pierce<br>
+	Poke<br>
+	Prick<br>
+	Punch through<br>
+	Puncture<br>
+	Rip through<br>
+	Run Through<br>
+	Scratch<br>
+	Sever<br>
+	Sink Deep<br>
+	Skewer<br>
+	Slit<br>
+	Spear<br>
+	Stab<br>
+	Stick through<br>
+	Strike<br>
+	Strike/Struck<br>
+	Stuck into<br>
+	Tear through`)}
+  },
+three: {
+ label: "🧱<br>Bludgeon",
+ callback: () => {showToGM(`🧱 Bludgeon`,
+	`Bash<br>
+	Behead<br>
+	Bloodied<br>
+	Break<br>
+	Bruise<br>
+	Bulldoze into<br>
+	Butcher<br>
+	Cave In<br>
+	Chop<br>
+	Crack<br>
+	Crash Into<br>
+	Crumple<br>
+	Crush<br>
+	Demolish<br>
+	Gore<br>
+	Gut<br>
+	Maim<br>
+	Mash<br>
+	Mutilate<br>
+	Plow into/through<br>
+	Pulverize<br>
+	Pummel<br>
+	Rip off<br>
+	Ruin<br>
+	Scratch<br>
+	Smack<br>
+	Smash<br>
+	Squash<br>
+	Swing<br>
+	Tear off<br>
+	Turn into pulp<br>
+	Whack<br>
+	Wreck`)}
+  },
+four: {
+ label: "🗡️<br>Slash",
+ callback: () => {showToGM(`🗡️ Slash`,
+	`Behead<br>
+	Break<br>
+	Carve<br>
+	Carve into/off<br>
+	Chop<br>
+	Cut<br>
+	Dismember<br>
+	Fillet<br>
+	Gash<br>
+	Gore<br>
+	Gouge<br>
+	Gut<br>
+	Hack<br>
+	Impale<br>
+	Jab<br>
+	Lacerate<br>
+	Lob off<br>
+	Maim<br>
+	Mutilate<br>
+	Plow into/though<br>
+	Punch into<br>
+	Rend<br>
+	Rip off<br>
+	Run through<br>
+	Scratch<br>
+	Sever<br>
+	Shear<br>
+	Skewer<br>
+	Slash<br>
+	Slice<br>
+	Slice off/into<br>
+	Slit<br>
+	Smack<br>
+	Spear<br>
+	Stab<br>
+	Stick through<br>
+	Sweep into<br>
+	Swing<br>
+	Tear off`)}
+  },
+five: {
+ label: "🧡<br>Fire",
+ callback: () => {showToGM(`🧡 Fire`,
+	`Ashify<br>
+	Bake<br>
+	BBQed<br>
+	Blast<br>
+	Blast with<br>
+	Blaze<br>
+	Blistering<br>
+	Burn<br>
+	Burn to a crisp<br>
+	Char<br>
+	Consume<br>
+	Crisp<br>
+	Engulf in flames<br>
+	Explodes<br>
+	Ignite<br>
+	Incinerate<br>
+	Kindle<br>
+	Light up<br>
+	Melt<br>
+	Reduce to Ash<br>
+	Reduce to ashes<br>
+	Roast<br>
+	Scorch<br>
+	Searing<br>
+	Set ablaze<br>
+	Set aflame<br>
+	Singe<br>
+	Smoke<br>
+	Smoldering pile<br>
+	Smother<br>
+	Toast<br>
+	Turn to ash<br>
+	Vaporize<br>
+	Wither up`)}
+  },
+six: {
+ label: "💙<br>Cold",
+ callback: () => {showToGM(`💙 Cold`,
+	`Crack<br>
+	Snap<br>
+	Crystalize<br>
+	Encase<br>
+	Vitrify<br>
+	Freeze<br>
+	Deathly Chill<br>
+	Hypothermic<br>
+	Spiderwebbing<br>
+	Stinging<br>
+	Needling<br>
+	Arctic<br>
+	Numbing`)}
+  },
+seven: {
+ label: "💛<br>Lightning",
+ callback: () => {showToGM(`💛 Lightning`,
+	`Crackle<br>
+	Forked<br>
+	Voltaic<br>
+	Static<br>
+	Galvanic<br>
+	Sizzling<br>
+	Current<br>
+	Channel<br>
+	Charged<br>
+	Snakes<br>
+	Bolt<br>
+	Harness the Energy<br>
+	Ionized`)}
+  },
+eight: {
+ label: "🌩️<br>Thunder",
+ callback: () => {showToGM(`🌩️ Thunder`,
+	`Concussive<br>
+	Shockwave<br>
+	Blast<br>
+	Shatter<br>
+	Rips through<br>
+	Pulverize<br>
+	Resounding<br>
+	Tectonic<br>
+	Devastating<br>
+	Ear-Splitting<br>
+	Shudders<br>
+	Seismic<br>
+	Wave`)}
+  },
+nine: {
+ label: "💚<br>Acid",
+ callback: () => {showToGM(`💚 Acid`,
+	`Corrodes<br>
+	Pits<br>
+	Blisters<br>
+	Melts<br>
+	Consumes<br>
+	Eats Into<br>
+	Bubbles<br>
+	Hissing<br>
+	Sizzling<br>
+	Pungent<br>
+	Vitriolic<br>
+	Frothing<br>
+	Spray`)}
+  },
+ten: {
+ label: "🤍<br>Radiant",
+ callback: () => {showToGM(`🤍 Radiant`,
+	`Divine<br>
+	Burst<br>
+	Blinding<br>
+	Searing<br>
+	Pours into<br>
+	Burns Through<br>
+	Cooks from Inside<br>
+	Solar<br>
+	Cosmic<br>
+	Penetrating<br>
+	Divine<br>
+	Penetrating<br>
+	Nova`)}
+  },
+eleven: {
+ label: "🖤<br>Necrotic",
+ callback: () => {showToGM(`🖤 Necrotic`,
+	`Sickening<br>
+	Aching<br>
+	Rupture<br>
+	Nausea<br>
+	Blacken<br>
+	Putrid<br>
+	Boils<br>
+	Rot<br>
+	Gangrenous<br>
+	Malignant<br>
+	Wither<br>
+	Feverish<br>
+	Pure Anti-Life`)}
+  },
+twelve: {
+ label: "💨<br>Force",
+ callback: () => {showToGM(`💨 Force`,
+	`Soul<br>
+	Essence<br>
+	Out-Of-Body<br>
+	Hissing<br>
+	Core<br>
+	Transdimensional<br>
+	Disintigrate<br>
+	Vaporise<br>
+	Entropic<br>
+	Gravitic<br>
+	Geodesic Arc<br>
+	Irridescent<br>
+	Ultraplanar`)}
+  },
+thirteen: {
+ label: "💪<br>Body Part",
+ callback: () => {showToGM(`💪 Body Part`,
+	`Ankle<br>
+	Arm<br>
+	Back<br>
+	Belly<br>
+	Bellybutton<br>
+	Bottom<br>
+	Breast<br>
+	Butt<br>
+	Buttocks<br>
+	Calf<br>
+	Cheek<br>
+	Chest<br>
+	Chin<br>
+	Clavicle<br>
+	Ear<br>
+	Elbow<br>
+	Eye<br>
+	Eyebrow<br>
+	Eyelash<br>
+	Face<br>
+	Finger<br>
+	Fist<br>
+	Foot<br>
+	Forearm<br>
+	Forehead<br>
+	Groin<br>
+	Hair<br>
+	Hand<br>
+	Head<br>
+	Hip<br>
+	Knee<br>
+	Knuckle<br>
+	Leg<br>
+	Lip<br>
+	Lower Leg<br>
+	Upper Leg<br>
+	Mouth<br>
+	Neck<br>
+	Nose<br>
+	Nostril<br>
+	Shoulder<br>
+	Stomach<br>
+	Thigh<br>
+	Throat<br>
+	Thumb<br>
+	Toe<br>
+	Tongue<br>
+	Tooth<br>
+	Torso<br>
+	Upper Arm<br>
+	Lower Arm<br>
+	Waist<br>
+	Wrist`)}
+  },
+fourteen: {
+ label: "💯<br>Nat 20",
+ callback: () => {showToGM(`💯 Nat 20`,
+	`Annihilate<br>
+	Obliterate<br>
+	Eradicate<br>
+	Ravage<br>
+	Wipe out<br>
+	Butcher<br>
+	Dispatch<br>
+	Exterminate<br>
+	Liquify<br>
+	Slay<br>
+	Snuff out<br>
+	Lay waste to<br>
+	Execute<br>
+	Massacre<br>
+	Slaughter<br>
+	Finish off<br>
+	Cadaverate<br>
+	Decimate<br>
+	Liquidate<br>
+	Slaughter<br>
+	Mutilate`)}
+  },
+fifteen: {
+ label: "☠️<br>Nat 1",
+ callback: () => {showToGM(`☠️ Nat 1`,
+	`Miss<br>
+	Fail<br>
+	Flounder<br>
+	Brush off<br>
+	Brush away<br>
+	Pay no attention<br>
+	Go astray<br>
+	Go wrong<br>
+	Slip<br>
+	Come to nothing<br>
+	Blunder<br>
+	Flop<br>
+	Fall<br>
+	Humble<br>
+	Yield<br>
+	Succumb<br>
+	Confuse<br>
+	Err<br>
+	Misconceive<br>
+	Misinterpret<br>
+	Misread<br>
+	Mistake<br>
+	Misunderstand<br>
+	Miscalculate<br>
+	Error<br>
+	Blow (the chance)<br>
+	Misestimate<br>
+	Misjudge<br>
+	Mixup<br>
+	Overestimate<br>
+	Underestimate<br>
+	Undervalue<br>
+	Lose control<br>
+	Confuse<br>
+	Bewilder<br>
+	Perplex<br>
+	Confound<br>
+	Backfire<br>
+	Fizzle<br>
+	Flop<br>
+	Peter out<br>
+	Be off the mark<br>
+	Botch<br>
+	Bungle<br>
+	Goof<br>
+	Jumble<br>
+	Lapse<br>
+	Misapprehend<br>
+	Snarl<br>
+	Tangle<br>
+	Pass<br>
+	Blocks<br>
+	Dodges<br>
+	Narrowly Avoids<br>
+	Hits Cover`)}
+  },
+sixteen: {
+ label: "😨<br>Dreadfuls",
+ callback: () => {showToGM(`😨 Dreadfuls`,
+	`Butcher<br>
+	Eviscerate<br>
+	Ventilated<br>
+	Decapitate<br>
+	Disembowel<br>
+	Deglove<br>
+	Globe luxation<br>
+	Crepitus<br>
+	Blast amputation<br>
+	Rupture<br>
+	Hemorrhage<br>
+	Exsanguinate<br>
+	Traumatic avulsion<br>
+	Massive edema (swelling)<br>
+	Perfusion (poison)<br>
+	Laceration<br>
+	Desiccation<br>
+	Prolapsed<br>
+	Hematoma<br>
+	Avulsion<br>
+	Atrophied<br>
+	Cavitation<br>
+	Orbital Blowout<br>
+	Arterial spurt`)}
+  }
+},
+default: "one",
+render: html => console.log("Register interactivity in the rendered dialog"),
+close: html => console.log("This always is logged no matter which option is chosen")
+});
+d.render(true);
